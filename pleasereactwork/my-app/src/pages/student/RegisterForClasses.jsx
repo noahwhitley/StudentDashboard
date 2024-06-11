@@ -16,7 +16,6 @@ function RegisterForClasses() {
         { id: 4, name: 'Physics', periods: ['A2', 'B3'], teacher: 'Dr. Lee' },
         { id: 5, name: 'Chemistry', periods: ['B7', 'A5'], teacher: 'Ms. Adams' },
         { id: 6, name: 'Biology', periods: ['B9', 'A1'], teacher: 'Mr. Garcia' },
-        // Add other available classes as needed
     ]);
     const [selectedClass, setSelectedClass] = useState('');
     const [selectedPeriod, setSelectedPeriod] = useState('');
@@ -33,7 +32,6 @@ function RegisterForClasses() {
     };
 
     const enrollClass = () => {
-        // Validation
         if (!selectedClass || !selectedPeriod) {
             setError('Please select both class and period.');
             return;
@@ -48,15 +46,11 @@ function RegisterForClasses() {
             setShowPopup(true);
             return;
         }
-    
-        // Check if the period is already filled
         if (enrolledClasses.some(classItem => classItem.period === selectedPeriod)) {
             setPopupMessage('The selected period is already filled.');
             setShowPopup(true);
             return;
         }
-    
-        // Enroll the class
         const classToAdd = availableClasses.find(classItem => classItem.name === selectedClass && classItem.periods.includes(selectedPeriod));
         if (classToAdd) {
             setEnrolledClasses([...enrolledClasses, { ...classToAdd, period: selectedPeriod }]);
@@ -81,7 +75,6 @@ function RegisterForClasses() {
     };
 
     const confirmUnenroll = () => {
-        // Check if the class to unenroll exists in enrolledClasses
         const classToRemove = enrolledClasses.find(classItem => classItem.id === classToUnenroll);
         if (!classToRemove) {
             console.error(`Class with ID ${classToUnenroll} not found in enrolledClasses.`);
@@ -91,7 +84,6 @@ function RegisterForClasses() {
 
         setEnrolledClasses(enrolledClasses.filter(classItem => classItem.id !== classToUnenroll));
 
-        // Add the unenrolled class back to available classes
         const unenrolledClass = availableClasses.find(item => item.id === classToRemove.id);
         if (unenrolledClass) {
             setAvailableClasses([...availableClasses, unenrolledClass]);
@@ -109,7 +101,7 @@ function RegisterForClasses() {
 
     return (
         <div className="bg-gray-200">
-            {/* Header */}
+            {/*header*/}
             <div className="flex justify-between items-center py-4 px-6 bg-blue-200 w-full h-1/6">
                 <div className="flex items-center">
                     <h1 className="text-lg font-bold">Register for Classes</h1>
@@ -123,7 +115,7 @@ function RegisterForClasses() {
                 </div>
             </div>
 
-            {/* Enrolled Classes */}
+            {/*enrolled classes*/}
             <div className="container mx-auto mt-8">
                 <h2 className="text-2xl font-semibold mb-4 pl-8">Enrolled Classes</h2>
                 <div className="flex flex-wrap gap-4 px-8">
@@ -133,7 +125,6 @@ function RegisterForClasses() {
                                 <h3 className="text-lg font-semibold mb-2">{classItem.name}</h3>
                                 <p className="text-sm text-gray-600">Teacher: {classItem.teacher}</p>
                                 <p className="text-sm text-gray-600">Period: {classItem.period}</p>
-                                {/* Add other class details */}
                             </div>
                             <button onClick={() => unenrollClass(classItem.id)} className="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 rounded-full text-xs">X</button>
                         </div>
@@ -141,7 +132,7 @@ function RegisterForClasses() {
                 </div>
             </div>
 
-            {/* Enrollment Form */}
+            {/*enrollment*/}
             <div className="container mx-auto mt-8">
                 <h2 className="text-2xl font-semibold mb-4 pl-8">Enroll into Classes</h2>
                 <div className="flex gap-4 px-8 pb-8">
@@ -167,7 +158,7 @@ function RegisterForClasses() {
                 </div>
                 {error && <p className="mt-2 text-sm text-red-600">{error}</p>}
             </div>
-            {/* Confirmation Modal */}
+            {/*conformation*/}
             {showConfirmation && (
                 <div className="fixed inset-0 flex items-center justify-center bg-gray-700 bg-opacity-50">
                     <div className="bg-white p-4 rounded-lg">
@@ -180,7 +171,7 @@ function RegisterForClasses() {
                 </div>
             )}
 
-            {/* Popup */}
+            {/*popup*/}
             {showPopup && (
                 <div className="fixed inset-0 flex items-center justify-center bg-gray-700 bg-opacity-50">
                     <div className="bg-white p-4 rounded-lg">

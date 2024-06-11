@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
 function EditStudentPopup({ student, onClose, onSave }) {
-    // Define the student data or use the passed student prop (if available)
     const studentData = student || {
         id: 1,
         firstName: 'John',
@@ -12,7 +11,6 @@ function EditStudentPopup({ student, onClose, onSave }) {
         email: 'john.doe@example.com',
         phoneNumber: '1234567890',
         address: '123 Main St, City, Country',
-        // Add other fields as needed
     };
 
     const handleSaveChanges = () => {
@@ -51,7 +49,6 @@ function EditStudentPopup({ student, onClose, onSave }) {
                         <label htmlFor="address" className="block text-sm font-medium text-gray-700">Address:</label>
                         <textarea id="address" name="address" rows="3" className="mt-1 p-2 border border-gray-300 rounded-md w-full" readOnly value={studentData.address}></textarea>
                     </div>
-                    {/* Add other fields as needed */}
                     <div className="flex justify-end">
                         <button type="button" className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600" onClick={handleSaveChanges}>Save Changes</button>
                     </div>

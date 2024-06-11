@@ -96,7 +96,6 @@ function TeachingClasses() {
     const saveEditedPeriod = () => {
         const updatedCourses = [...courses];
         const selectedCourse = updatedCourses[selectedCourseIndex];
-        // Send the updated course to the server if needed
         console.log('Saving edited period for course:', selectedCourse);
         setCourses(updatedCourses);
         setEditMode(false);
@@ -106,13 +105,8 @@ const handleAddStudent = () => {
     if (newStudentId) {
         const selectedCourse = courses[selectedCourseIndex];
         const selectedStudent = students.find(student => student.id === parseInt(newStudentId));
-
-        // Check if the selected student is already enrolled in the class
         const isStudentAlreadyEnrolled = selectedCourse.students.some(student => student.id === selectedStudent.id);
-
-        // Check if the class has reached its capacity
         const isClassFull = selectedCourse.students.length >= selectedCourse.capacity;
-
         if (!isStudentAlreadyEnrolled && !isClassFull) {
             const updatedCourses = [...courses];
             updatedCourses[selectedCourseIndex].students.push(selectedStudent);
@@ -220,7 +214,7 @@ const handleAddStudent = () => {
                     <div key={index} className="bg-blue-500 text-white rounded-lg flex justify-center items-center cursor-pointer" style={{ width: `${bubbleWidth}px`, marginRight: '10px', marginLeft: '10px', fontSize: '14px' }} onClick={() => handleCourseSelect(index)}>
                         <div>
                             <p className="text-base font-semibold">{course.name}</p>
-                            <p className="text-xs">Teacher: You</p> {/* Display "You" as the teacher */}
+                            <p className="text-xs">Teacher: You</p>
                             <p className="text-xs">Period: {course.period}</p>
                         </div>
                     </div>

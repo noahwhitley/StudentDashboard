@@ -11,7 +11,6 @@ function StudentDashboard() {
     const [isAlertsExpanded, setIsAlertsExpanded] = useState(false);
 
     useEffect(() => {
-        // Simulate loading user data
         setTimeout(() => {
             setUserName('Student');
             setClasses([

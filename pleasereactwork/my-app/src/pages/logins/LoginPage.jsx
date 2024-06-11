@@ -9,7 +9,6 @@ const LoginPage = () => {
     const [error, setError] = useState('');
 
     const handleLogin = () => {
-        // Filler data for demo purposes
         const validLogins = {
             student: { username: 'student123', password: 'student123' },
             admin: { username: 'admin123', password: 'admin123' }

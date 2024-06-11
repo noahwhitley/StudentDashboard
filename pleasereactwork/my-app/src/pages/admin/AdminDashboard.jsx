@@ -5,8 +5,8 @@ import { faUser, faUsersLine, faEdit, faChevronDown, faChevronUp } from '@fortaw
 
 function AdminDashboard() {
     const [userName, setUserName] = useState('Admin');
-    const [totalClasses, setTotalClasses] = useState(4); // Preset total classes
-    const [totalStudents, setTotalStudents] = useState(80); // Preset total students
+    const [totalClasses, setTotalClasses] = useState(4);
+    const [totalStudents, setTotalStudents] = useState(80);
     const [adminAlerts, setAdminAlerts] = useState([]);
     const [studentAlerts, setStudentAlerts] = useState([]);
     const [alerts, setAlerts] = useState([]);
@@ -14,7 +14,7 @@ function AdminDashboard() {
         { name: 'Math', enrolledStudents: 25, capacity: 30 },
         { name: 'Science', enrolledStudents: 20, capacity: 35 },
         { name: 'History', enrolledStudents: 22, capacity: 25 },
-        { name: 'English', enrolledStudents: 18, capacity: 20 }, // Add English class
+        { name: 'English', enrolledStudents: 18, capacity: 20 },
     ]);
     const [isAlertsExpanded, setIsAlertsExpanded] = useState(false);
     const [newAlert, setNewAlert] = useState('');
@@ -45,12 +45,12 @@ function AdminDashboard() {
 
     return (
         <div className="bg-white">
-            {/* Header */}
+            {/*header*/}
             <div className="flex justify-between items-center py-4 px-6 bg-blue-200 w-full h-1/6">
                 <div className="flex items-center">
                     <h1 className="text-lg font-bold">Admin Dashboard</h1>
                 </div>
-                {/* Navigation Links */}
+                {/*navbar*/}
                 <div className="flex items-center space-x-4">
                     <ul className="flex items-center gap-[.5vw] text-blue-900 ">
                         <li>
@@ -72,9 +72,9 @@ function AdminDashboard() {
                 </div>
             </div>
 
-            {/* Main Content */}
+            {/*main content*/}
             <div className="container mx-auto">
-                {/* Dashboard Overview */}
+                {/*dashboard overview*/}
                 <div className="w-full py-8 flex justify-between items-start bg-white">
                     <div className="flex-grow">
                         <h1 className="text-3xl lg:text-2xl xl:text-3xl pl-6 md:pl-8 lg:pl-10 pt-6 md:pt-4 lg:pt-6 font-bold">Welcome, {userName}!</h1>
@@ -93,7 +93,7 @@ function AdminDashboard() {
                             </Link>
                         </div>
                     </div>
-                    {/* Publish Alerts Section */}
+                    {/*alerts*/}
                     <div className="w-full md:w-auto lg:w-1/3 p-4 border border-blue-900 rounded-lg bg-blue-100 md:ml-4 lg:ml-0 mt-4 md:mt-0">
                         <h3 className="text-lg font-semibold">Alerts/Updates</h3>
                         <div className="mt-4">
@@ -120,8 +120,6 @@ function AdminDashboard() {
                         </div>
                     </div>
                 </div>
-
-                {/* Additional Alerts Section */}
                 <div className="w-full py-8 flex justify-between items-start bg-white mt-8">
                     <div className="w-2/5 p-4 border border-blue-900 rounded-lg bg-blue-100">
                         <h3 className="text-lg font-semibold">Admin Alerts</h3>
@@ -146,7 +144,7 @@ function AdminDashboard() {
                             )}
                         </div>
                     </div>
-                    {/* Class Enrollment Statistics */}
+                    {/*class enrollment stats*/}
                     <div className="w-2/5 p-4 border border-blue-900 rounded-lg bg-blue-100 ml-4">
                         <h3 className="text-lg font-semibold">Class Enrollment Statistics</h3>
                         <div className="mt-4">

@@ -14,7 +14,6 @@ function RegisteredStudents() {
     const bubbleWidth = calculateBubbleWidth();
 
     useEffect(() => {
-        // Set the students data
         const newStudents = [
             { 
                 id: 1,
@@ -24,7 +23,6 @@ function RegisteredStudents() {
                 email: 'alice.doe@example.com',
                 phoneNumber: '1234567890',
                 address: '123 Main St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 2,
@@ -34,7 +32,6 @@ function RegisteredStudents() {
                 email: 'bob.smith@example.com',
                 phoneNumber: '9876543210',
                 address: '456 Elm St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 3,
@@ -44,7 +41,6 @@ function RegisteredStudents() {
                 email: 'charlie.johnson@example.com',
                 phoneNumber: '5555555555',
                 address: '789 Oak St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 4,
@@ -54,7 +50,6 @@ function RegisteredStudents() {
                 email: 'diana.brown@example.com',
                 phoneNumber: '1112223333',
                 address: '987 Pine St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 5,
@@ -64,7 +59,6 @@ function RegisteredStudents() {
                 email: 'paige.williams@example.com',
                 phoneNumber: '4445556666',
                 address: '654 Maple St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 6,
@@ -74,7 +68,6 @@ function RegisteredStudents() {
                 email: 'frank.jones@example.com',
                 phoneNumber: '7778889999',
                 address: '321 Oak St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 7,
@@ -84,7 +77,6 @@ function RegisteredStudents() {
                 email: 'grace.lee@example.com',
                 phoneNumber: '3334445555',
                 address: '456 Elm St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 8,
@@ -94,7 +86,6 @@ function RegisteredStudents() {
                 email: 'henry.taylor@example.com',
                 phoneNumber: '9998887777',
                 address: '789 Maple St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 9,
@@ -104,7 +95,6 @@ function RegisteredStudents() {
                 email: 'isabella.martinez@example.com',
                 phoneNumber: '2223334444',
                 address: '123 Oak St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 10,
@@ -114,7 +104,6 @@ function RegisteredStudents() {
                 email: 'jack.anderson@example.com',
                 phoneNumber: '6667778888',
                 address: '789 Elm St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 11,
@@ -124,7 +113,6 @@ function RegisteredStudents() {
                 email: 'katherine.clark@example.com',
                 phoneNumber: '1112223333',
                 address: '654 Pine St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 12,
@@ -134,7 +122,6 @@ function RegisteredStudents() {
                 email: 'liam.lewis@example.com',
                 phoneNumber: '8889990000',
                 address: '987 Maple St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 13,
@@ -144,7 +131,6 @@ function RegisteredStudents() {
                 email: 'mia.garcia@example.com',
                 phoneNumber: '7778889999',
                 address: '345 Oak St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 14,
@@ -154,7 +140,6 @@ function RegisteredStudents() {
                 email: 'dave.brown@example.com',
                 phoneNumber: '4445556666',
                 address: '789 Pine St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 15,
@@ -164,7 +149,6 @@ function RegisteredStudents() {
                 email: 'olivia.wilson@example.com',
                 phoneNumber: '1231231234',
                 address: '678 Elm St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 16,
@@ -174,7 +158,6 @@ function RegisteredStudents() {
                 email: 'patrick.rodriguez@example.com',
                 phoneNumber: '9879879876',
                 address: '789 Oak St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 17,
@@ -184,7 +167,6 @@ function RegisteredStudents() {
                 email: 'quinn.gonzalez@example.com',
                 phoneNumber: '1234567890',
                 address: '456 Maple St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 18,
@@ -194,7 +176,6 @@ function RegisteredStudents() {
                 email: 'rachel.martinez@example.com',
                 phoneNumber: '9876543210',
                 address: '123 Pine St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 19,
@@ -204,7 +185,6 @@ function RegisteredStudents() {
                 email: 'eva.lopez@example.com',
                 phoneNumber: '9876543210',
                 address: '123 Maple St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 20,
@@ -214,7 +194,6 @@ function RegisteredStudents() {
                 email: 'tiffany.lee@example.com',
                 phoneNumber: '9876543210',
                 address: '123 Oak St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 21,
@@ -224,7 +203,6 @@ function RegisteredStudents() {
                 email: 'blake.wright@example.com',
                 phoneNumber: '9876543210',
                 address: '123 Elm St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 22,
@@ -234,9 +212,7 @@ function RegisteredStudents() {
                 email: 'cole.scott@example.com',
                 phoneNumber: '9876543210',
                 address: '123 Oak St, City, Country',
-                // Add other fields as needed
             },
-                // Previous students...
             { 
                 id: 23,
                 firstName: 'Wendy',
@@ -245,7 +221,6 @@ function RegisteredStudents() {
                 email: 'wendy.gonzalez@example.com',
                 phoneNumber: '9876543210',
                 address: '123 Pine St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 24,
@@ -255,7 +230,6 @@ function RegisteredStudents() {
                 email: 'jake.baker@example.com',
                 phoneNumber: '9876543210',
                 address: '123 Maple St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 25,
@@ -265,7 +239,6 @@ function RegisteredStudents() {
                 email: 'kate.hamilton@example.com',
                 phoneNumber: '9876543210',
                 address: '123 Elm St, City, Country',
-                // Add other fields as needed
             },
             { 
                 id: 26,
@@ -275,7 +248,6 @@ function RegisteredStudents() {
                 email: 'zach.adams@example.com',
                 phoneNumber: '9876543210',
                 address: '123 Oak St, City, Country',
-                // Add other fields as needed
             },
         ];
     
@@ -292,7 +264,7 @@ function RegisteredStudents() {
     };
 
     const handleAddClick = () => {
-        setShowAddPopup(true); // Set showAddPopup state to true to display the Add Student popup
+        setShowAddPopup(true);
     };
 
     const handleSaveChanges = (editedStudent) => {
@@ -301,12 +273,12 @@ function RegisteredStudents() {
                 student.id === editedStudent.id ? editedStudent : student
             )
         );
-        setShowEditPopup(false); // Close the popup after saving changes
+        setShowEditPopup(false);
     };
 
     const handleAddStudent = (newStudent) => {
         setStudents(prevStudents => [...prevStudents, { ...newStudent, id: prevStudents.length + 1 }]);
-        setShowAddPopup(false); // Close the popup after adding a new student
+        setShowAddPopup(false);
     };
 
     const handleCloseEditPopup = () => {
@@ -316,11 +288,11 @@ function RegisteredStudents() {
     const handleCloseAddPopup = () => {
         setShowAddPopup(false);
     };
-    // Calculate bubble width based on the number of students
+
     function calculateBubbleWidth() {
         const totalStudents = students.length;
         const maxStudentsPerRow = 6;
-        const paddingBetweenBubbles = 20; // Adjust this value according to your preference
+        const paddingBetweenBubbles = 20;
         const containerWidth = document.querySelector('.container');
         if (containerWidth) {
             return (containerWidth.offsetWidth / Math.min(totalStudents, maxStudentsPerRow)) - paddingBetweenBubbles;
@@ -330,7 +302,7 @@ function RegisteredStudents() {
 
     return (
         <div className="bg-gray-200 h-screen">
-            {/* Header */}
+            {/*header*/}
             <div className="flex justify-between items-center py-4 px-6 bg-blue-200 w-full h-1/6">
                 <div className="flex items-center">
                     <h1 className="text-lg font-bold">Registered Students</h1>
@@ -344,7 +316,7 @@ function RegisteredStudents() {
                 </div>
             </div>
 
-            {/* Student List */}
+            {/*list of students*/}
             <div className="container mx-auto mt-8">
                 <div className="flex flex-wrap justify-center gap-6">
                     {(showMore ? students : students.slice(0, 6)).map(student => (
@@ -352,7 +324,6 @@ function RegisteredStudents() {
                             <h2 className="text-lg font-semibold mb-2">{student.firstName} {student.lastName}</h2>
                             <p className="text-sm text-gray-600 mb-2">{student.username}</p>
                             <p className="text-sm text-gray-600 mb-2">{student.email}</p>
-                            {/* Add other fields as needed */}
                             <button onClick={() => handleEditClick(student)} className="text-blue-500 hover:underline">Edit</button>
                         </div>
                     ))}
@@ -387,7 +358,7 @@ function RegisteredStudents() {
                 </div>
             </div>
 
-            {/* Add Student Button */}
+            {/*add student*/}
             <div className="fixed bottom-10 right-10">
                 <button onClick={handleAddClick} className="bg-blue-500 text-white px-4 py-2 rounded-full flex items-center justify-center hover:bg-blue-600">
                     <FontAwesomeIcon icon={faPlus} className="mr-2" /> Add Student

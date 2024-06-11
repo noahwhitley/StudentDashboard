@@ -9,7 +9,6 @@ function MyClasses() {
     const [showAllAssignments, setShowAllAssignments] = useState(false);
 
     useEffect(() => {
-        // Simulate loading class data
         setTimeout(() => {
             setClasses([
                 { id: 1, name: 'Mathematics', period: 'A1', teacher: 'Mr. Smith' },
@@ -18,12 +17,11 @@ function MyClasses() {
             ]);
         }, 1000);
 
-        // Calculate bubble width
         const calculateBubbleWidth = () => {
             const containerWidth = document.querySelector('.container');
             if (containerWidth) {
                 const totalClasses = classes.length;
-                const paddingBetweenBubbles = 20; // Adjust this value according to your preference
+                const paddingBetweenBubbles = 20;
                 return (containerWidth.offsetWidth / totalClasses) - paddingBetweenBubbles;
             }
             return 0;
