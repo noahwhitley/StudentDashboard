@@ -5,14 +5,17 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 function RegisterForClasses() {
     const [enrolledClasses, setEnrolledClasses] = useState([
-        { id: 1, name: 'Class A', period: 'A1', teacher: 'Teacher A' },
-        { id: 2, name: 'Class B', period: 'B6', teacher: 'Teacher B' },
-        // Add other enrolled classes as needed
-    ]);
+        { id: 1, name: 'Mathematics', period: 'A1', teacher: 'Mr. Smith' },
+        { id: 2, name: 'History', period: 'B2', teacher: 'Ms. Johnson' },
+        { id: 3, name: 'Science', period: 'A3', teacher: 'Dr. Brown' },
+    ]);    
     const [availableClasses, setAvailableClasses] = useState([
-        { id: 3, name: 'Class C', periods: ['A2', 'B3'], teacher: 'Teacher C' },
-        { id: 4, name: 'Class D', periods: ['B7', 'A5'], teacher: 'Teacher D' },
-        { id: 5, name: 'Class B', periods: ['B9', 'A1'], teacher: 'Teacher B' },
+        { id: 1, name: 'Mathematics', periods: ['A1', 'B2'], teacher: 'Mr. Smith' },
+        { id: 2, name: 'History', periods: ['A3', 'B4'], teacher: 'Ms. Johnson' },
+        { id: 3, name: 'Science', periods: ['A5', 'B6'], teacher: 'Dr. Brown' },
+        { id: 4, name: 'Physics', periods: ['A2', 'B3'], teacher: 'Dr. Lee' },
+        { id: 5, name: 'Chemistry', periods: ['B7', 'A5'], teacher: 'Ms. Adams' },
+        { id: 6, name: 'Biology', periods: ['B9', 'A1'], teacher: 'Mr. Garcia' },
         // Add other available classes as needed
     ]);
     const [selectedClass, setSelectedClass] = useState('');

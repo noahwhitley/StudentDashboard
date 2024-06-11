@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import {faGraduationCap, faUser, faEdit, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import MyClasses from './MyClasses';
-import MyAccount from './MyAccount';
-import RegisterForClasses from './RegisterForClasses';
+import { faGraduationCap, faUser, faEdit, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 function StudentDashboard() {
     const [userName, setUserName] = useState('');
@@ -16,10 +13,18 @@ function StudentDashboard() {
     useEffect(() => {
         // Simulate loading user data
         setTimeout(() => {
-            setUserName('John Doe');
-            setClasses([]);
-            setAlerts([]);
-            setRegistrationDeadlines([]);
+            setUserName('Student');
+            setClasses([
+                { id: 1, name: 'Mathematics', teacher: 'Mr. Smith' },
+                { id: 2, name: 'History', teacher: 'Ms. Johnson' },
+                { id: 3, name: 'Science', teacher: 'Dr. Brown' }
+            ]);
+            setAlerts([
+                'Class cancellation for tomorrow.',
+                'Upcoming exam on Friday.',
+                'Reminder: project due next week.'
+            ]);
+            setRegistrationDeadlines(['Class Registration Due Next Week!', 'History Final on the 28th']);
         }, 1000);
     }, []);
 

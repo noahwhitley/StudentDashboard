@@ -4,15 +4,21 @@ import { faChevronLeft, faChevronDown, faChevronUp } from '@fortawesome/free-sol
 import { Link } from 'react-router-dom';
 
 function MyClasses() {
-    const [classes, setClasses] = useState([
-        { id: 1, name: 'Class A', period: 'A1', teacher: 'Teacher A' },
-        { id: 2, name: 'Class B', period: 'B2', teacher: 'Teacher B' },
-        { id: 3, name: 'Class C', period: 'A3', teacher: 'Teacher C' },
-    ]);
+    const [classes, setClasses] = useState([]);
     const [bubbleWidth, setBubbleWidth] = useState(0);
     const [showAllAssignments, setShowAllAssignments] = useState(false);
 
     useEffect(() => {
+        // Simulate loading class data
+        setTimeout(() => {
+            setClasses([
+                { id: 1, name: 'Mathematics', period: 'A1', teacher: 'Mr. Smith' },
+                { id: 2, name: 'History', period: 'B2', teacher: 'Ms. Johnson' },
+                { id: 3, name: 'Science', period: 'A3', teacher: 'Dr. Brown' },
+            ]);
+        }, 1000);
+
+        // Calculate bubble width
         const calculateBubbleWidth = () => {
             const containerWidth = document.querySelector('.container');
             if (containerWidth) {
@@ -33,12 +39,9 @@ function MyClasses() {
     ];
 
     const assignments = [
-        { id: 1, className: 'Class A', assignment: 'Essay', dueDate: '2024-04-15', status: 'soon' },
-        { id: 2, className: 'Class B', assignment: 'Presentation', dueDate: '2024-04-10', status: 'overdue' },
-        { id: 3, className: 'Class C', assignment: 'Project', dueDate: '2024-04-20', status: 'soon' },
-        { id: 4, className: 'Class D', assignment: 'Homework', dueDate: '2024-04-22', status: 'soon' },
-        { id: 5, className: 'Class E', assignment: 'Quiz', dueDate: '2024-04-25', status: 'soon' },
-        { id: 6, className: 'Class F', assignment: 'Research Paper', dueDate: '2024-04-30', status: 'soon' },
+        { id: 1, className: 'Mathematics', assignment: 'Exam', dueDate: '2024-06-15', status: 'soon' },
+        { id: 2, className: 'History', assignment: 'Essay', dueDate: '2024-06-18', status: 'soon' },
+        { id: 3, className: 'Science', assignment: 'Project', dueDate: '2024-06-20', status: 'soon' },
     ];
 
     const renderAlerts = () => {
@@ -64,7 +67,7 @@ function MyClasses() {
             </ul>
         );
     };
-    
+
     const renderClassBubbles = () => {
         return (
             <div className="flex flex-nowrap gap-4 pl-6 lg:pl-8 overflow-x-auto">
@@ -136,21 +139,21 @@ function MyClasses() {
                     <div className="w-2/5">
                         <div className="bg-blue-200 rounded-lg p-4 ml-10">
                             <h2 className="text-lg font-bold mb-2">Tuition Fees</h2>
-                            <div className="text-3xl font-bold pl-2">$XXXXX</div>
+                            <div className="text-3xl font-bold pl-2">$1,200</div>
                             <button className="mt-4 bg-blue-500 text-white rounded-full px-6 py-2 hover:bg-blue-600 block mx-auto">Pay your fees</button>
                         </div>
                     </div>
                     <div className="w-2/5">
                         <div className="bg-blue-400 rounded-lg p-4 mx-auto">
                             <h2 className="text-lg font-bold mb-2">Credit Hours</h2>
-                            <div className="text-3xl font-bold pl-2">XX</div>
+                            <div className="text-3xl font-bold pl-2">86</div>
                             <button className="mt-4 bg-blue-600 text-white rounded-full px-6 py-2 hover:bg-blue-600 block mx-auto">Track your credit hours</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    ); 
+    );
 }
 
 export default MyClasses;

@@ -75,7 +75,7 @@ function AdminAccount() {
                 </div>
                 <div className="flex items-center space-x-4">
                     <button className="px-4 bg-gray-100 rounded-full py-2 hover:bg-gray-300">
-                        <Link to="/admin/admin-dashboard" className="flex items-center">
+                        <Link to="/admin-dashboard" className="flex items-center">
                             <FontAwesomeIcon className="text-blue-900 mr-1" icon={faChevronLeft} fixedWidth /> Back to Admin Dashboard
                         </Link>
                     </button>

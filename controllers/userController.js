@@ -1,19 +1,11 @@
-// userController.js
-
 const User = require('../models/user');
 
-const UserController = {
-  register: async (req, res) => {
-    // Implementation for user registration
-  },
-
-  login: async (req, res) => {
-    // Implementation for user login
-  },
-
-  updateProfile: async (req, res) => {
-    // Implementation for updating user profile
-  }
+// Get all users
+exports.getAllUsers = async (req, res) => {
+    try {
+        const users = await User.find();
+        res.status(200).json(users);
+    } catch (err) {
+        res.status(500).json({ error: 'Error fetching users', details: err });
+    }
 };
-
-module.exports = UserController;
