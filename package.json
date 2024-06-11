@@ -1,12 +1,14 @@
 {
+  "homepage": "https://noahwhitley.github.io/StudentDashboard",
   "name": "studentdashboard",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "proxy": "http://localhost:5000",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -14,6 +16,7 @@
     "axios": "^1.7.2",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "gh-pages": "^6.1.1",
     "mongoose": "^8.4.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1"
